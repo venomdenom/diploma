@@ -75,7 +75,7 @@ class MetricsReccomender:
         if self.target_type == 'classification':
             return self._suggest_classification_metric()
         else:
-            pass
+            return self._suggest_regression_metric()
         
     
     def _determine_target_type(self) -> str:
