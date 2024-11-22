@@ -1,8 +1,8 @@
 import numpy as np
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, mean_squared_error, mean_absolute_error, mean_absolute_percentage_error, r2_score
-from sklearn.utils.multiclass import type_of_target
 from collections import Counter
 from typing import Dict, List
+from helpers import BaseHelper
 
 class ClassificationMetrics:
     """
@@ -71,27 +71,11 @@ class MetricsReccomender:
         Note:
         In regression loss function is also a metric, so always calculare r2_score, as getting mse = 102 says almost nothing, whereas r2_score = 0.21 says a lot about quality.
         """
-        self.target_type = self._determine_target_type()
+        self.target_type = BaseHelper.determine_target_type()
         if self.target_type == 'classification':
             return self._suggest_classification_metric()
         else:
             return self._suggest_regression_metric()
-        
-    
-    def _determine_target_type(self) -> str:
-        """
-        Determine if the target variable is for classification or regression.
-        
-        Returns:
-        - str: 'classification' or 'regression'.
-        """
-        target_type = type_of_target(self.y)
-        if target_type in ['binary', 'multiclass']:
-            return 'classification'
-        elif target_type in ['continuous', 'continuous-multioutput']:
-            return 'regression'
-        else:
-            raise ValueError(f"Unsupported target type: {self.target_type}")
         
     
     def _suggest_classification_metric(self) -> Dict[str, List[str]]:
@@ -101,12 +85,8 @@ class MetricsReccomender:
         Returns:
         - dict: The best metric and alternatives for classification tasks.
         """
-        class_counts = Counter(self.y)
         
-        total_samples = sum(class_counts.values())
-        max_class_ratio = max(class_counts.values()) / total_samples
-        
-        best_metric = 'accuracy' if max_class_ratio > 0.7 else 'f1_score'
+        best_metric = 'accuracy' if BaseHelper.check_class_imbalance() else 'f1_score'
         
         other_metrics = ["precision", "recall", "f1_score"] if best_metric == "accuracy" else ["accuracy", "precision", "recall"]
         
