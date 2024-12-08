@@ -1,0 +1,41 @@
+.preprocessing-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.preprocessing-container h2 {
+    margin-bottom: 20px;
+}
+
+.preprocessing-container .form-group {
+    margin-bottom: 15px;
+}
+
+.preprocessing-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.preprocessing-container select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.preprocessing-container button {
+    padding: 10px 20px;
+    background-color: #2e43ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.preprocessing-container button:hover {
+    background-color: #1a2f9e;
+}

@@ -1,0 +1,64 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    /* Light background color */
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 20px;
+}
+
+/* Section Styling */
+.section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: #2e43ff;
+    /* Primary color */
+    margin-bottom: 15px;
+}
+
+/* Add some padding between the sections */
+#file-upload {
+    background-color: #fff5e6;
+    /* Light background for file upload */
+}
+
+#preprocessing {
+    background-color: #e6f7ff;
+    /* Light background for preprocessing */
+}
+
+#results {
+    background-color: #f2e6ff;
+    /* Light background for results */
+}
+
+#progress {
+    background-color: #f7f7f7;
+    /* Light background for progress */
+}
+
+/* Styling for the content inside each section */
+section .section-content {
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 8px;
+}

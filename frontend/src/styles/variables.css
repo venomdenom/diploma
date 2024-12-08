@@ -1,0 +1,19 @@
+:root {
+    --primary-orange: #ff8c34;
+    --primary-purple: #b83cff;
+    --primary-blue: #2e43ff;
+    --black: #000000;
+
+    --font-small: 0.875rem;
+    --font-medium: 1rem;
+    --font-large: 1.5rem;
+    --font-xlarge: 2rem;
+
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 1.5rem;
+
+    --border-radius: 5px;
+
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}

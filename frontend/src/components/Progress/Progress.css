@@ -1,0 +1,38 @@
+.progress-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.progress-container h2 {
+    margin-bottom: 20px;
+}
+
+.progress-bar-container {
+    height: 30px;
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #2e43ff;
+    /* Primary color */
+    border-radius: 5px;
+}
+
+.progress-status {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.progress-percent {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
